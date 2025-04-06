@@ -55,7 +55,7 @@ def calculate(expression: str, line_number: int, error_list: list):
         if current_number:  # Если после обработки всех символов осталось текущее число
             parts.append(current_number)  # Добавляем его в список операндов
 
-        if len(expression) == 0:  # Если количество операндов не равно 2 или оператор не найден
+        if len(expression) == 0:  # Если строка пустая
             raise ValueError("Пустая строка.")  # Вызываем исключение
 
         if len(parts) != 2 or operator is None:  # Если количество операндов не равно 2 или оператор не найден
